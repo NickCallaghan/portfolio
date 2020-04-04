@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600&display=swap");
+
+$color-light: rgba(255, 255, 255, 1);
+$color-mid: rgba(197, 195, 198, 1);
+$color-dark: rgb(34, 34, 34);
+$color-primary: rgba(249, 214, 74, 1);
+$color-accent: rgba(58, 155, 234, 1);
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: $color-primary;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Overpass", sans-serif;
+}
+
+a.btn {
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 15px;
+  margin-top: 1em;
+}
+
+a.btn:hover {
+  background-color: $color-primary;
+  color: $color-dark;
+  transition: all 0.2s;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid $color-primary;
+  border-radius: 15px;
+  padding: 1.5em 0.6em;
+  .card-icon {
+    font-size: 3em;
+  }
+}
+
+// Hero Section Styles
+section.intro {
+  background-color: $color-dark;
+  color: $color-light;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .intro-content {
+    max-width: 750px;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.2em;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 1.2rem;
+      font-weight: 200;
+      padding-top: 0;
+      margin: 0;
+      span {
+        color: $color-primary;
+      }
+    }
+    .social ul {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      li {
+        padding: 0em 0.3em;
+        font-size: 1.5rem;
+      }
+      & a {
+        color: $color-light;
+      }
+      & a:hover {
+        color: $color-primary;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
+
+// About Section
+.about {
+  padding: 2em;
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto 0.5em;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  .profile-image {
+    border-radius: 50%;
+  }
+  .about-content {
+    h2 {
+      text-align: center;
+    }
+    p {
+      color: $color-mid;
+      text-align: justify;
+      line-height: 1.5;
+    }
+  }
+  .interests {
+    display: grid;
+    margin: 0.5em 0;
+    gap: 2em;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    .section-heading {
+      grid-column: 1/-1;
+      text-align: center;
+    }
+  }
+}

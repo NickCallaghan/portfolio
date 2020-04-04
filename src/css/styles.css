@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #f9d64a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Overpass", sans-serif;
+}
+
+a.btn {
+  border: 1px solid #f9d64a;
+  color: #f9d64a;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 15px;
+  margin-top: 1em;
+}
+
+a.btn:hover {
+  background-color: #f9d64a;
+  color: #222222;
+  transition: all 0.2s;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #f9d64a;
+  border-radius: 15px;
+  padding: 1.5em 0.6em;
+}
+
+.card .card-icon {
+  font-size: 3em;
+}
+
+section.intro {
+  background-color: #222222;
+  color: white;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.intro .intro-content {
+  max-width: 750px;
+}
+
+section.intro .intro-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.2em;
+}
+
+section.intro .intro-content p {
+  line-height: 1.7;
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding-top: 0;
+  margin: 0;
+}
+
+section.intro .intro-content p span {
+  color: #f9d64a;
+}
+
+section.intro .intro-content .social ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+section.intro .intro-content .social ul li {
+  padding: 0em 0.3em;
+  font-size: 1.5rem;
+}
+
+section.intro .intro-content .social ul a {
+  color: white;
+}
+
+section.intro .intro-content .social ul a:hover {
+  color: #f9d64a;
+  transition: all 0.2s;
+}
+
+.about {
+  padding: 2em;
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto 0.5em;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .profile-image {
+  border-radius: 50%;
+}
+
+.about .about-content h2 {
+  text-align: center;
+}
+
+.about .about-content p {
+  color: #c5c3c6;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.about .interests {
+  display: grid;
+  margin: 0.5em 0;
+  gap: 2em;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.about .interests .section-heading {
+  grid-column: 1/-1;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */
