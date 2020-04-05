@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;800&display=swap");
 
 $color-light: rgba(255, 255, 255, 1);
 $color-mid: rgba(197, 195, 198, 1);
@@ -18,9 +18,14 @@ html {
   scroll-behavior: smooth;
 }
 
+h2 {
+  color: $color-dark;
+}
+
 body {
   margin: 0;
   font-family: "Overpass", sans-serif;
+  font-size: 1em;
 }
 
 a.btn {
@@ -39,6 +44,10 @@ a.btn:hover {
   transition: all 0.2s;
 }
 
+section h2 {
+  text-transform: uppercase;
+}
+
 .card {
   text-align: center;
   border: 1px solid $color-primary;
@@ -49,11 +58,101 @@ a.btn:hover {
   }
 }
 
+//Navigation
+.main-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: $color-primary;
+  padding: 0 1em;
+  margin: 0;
+  font-size: 1.5em;
+  .nav-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+  .brand {
+    color: $color-dark;
+    font-weight: 800;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-right: auto;
+  }
+  .hamburger {
+    color: $color-dark;
+    position: absolute;
+    top: 0em;
+    right: 1em;
+    font-size: 1.2em;
+  }
+  ul.main-nav-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    perspective: 100px;
+  }
+  .main-nav-item a {
+    color: $color-dark;
+    display: inline-block;
+    padding: 0em;
+    margin: 0.1em 1em;
+    border-bottom: 3px solid rgba(34, 34, 34, 0);
+    transition: all 0.3s;
+  }
+  .main-nav-item a:hover,
+  .main-nav-item a:active {
+    border-bottom: 3px solid rgba(34, 34, 34, 1);
+  }
+  [aria-expanded="false"] ~ .main-nav-list {
+    max-height: 0px;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.5s;
+  }
+  [aria-expanded="true"] ~ .main-nav-list {
+    max-height: 300px;
+    transform: rotateX(0deg);
+    transition: all 0.7s;
+  }
+  @media (min-width: 600px) {
+    .nav-wrapper {
+      flex-direction: row;
+      // padding: 0.2em;
+      .hamburger ~ ul.main-nav-list {
+        max-height: 300px;
+        width: 100%;
+        transform: rotateX(0deg);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+}
+
 // Hero Section Styles
 section.intro {
   background-color: $color-dark;
   color: $color-light;
   height: 100vh;
+  width: 100%;
   margin: 0 auto;
   padding: 2em;
   display: flex;
@@ -61,7 +160,6 @@ section.intro {
   align-items: center;
   .intro-content {
     max-width: 750px;
-
     h1 {
       font-size: 2rem;
       margin-bottom: 0.2em;
@@ -97,7 +195,7 @@ section.intro {
 
 // About Section
 .about {
-  padding: 2em;
+  padding: 7.5em 2em;
   display: flex;
   max-width: 800px;
   margin: 0 auto 0.5em;
