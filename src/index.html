@@ -152,17 +152,21 @@
       <h2 class="section-heading">Talk to me</h2>
       <form name="contact" method="POST" data-netlify="true">
         <div class="form-group">
+          <div class="form-icon"><i class="fas fa-user"></i></div>
           <label for="name">Name:</label>
           <input required type="text" name="name" placeholder="Name" />
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
+          <div class="form-icon"><i class="fas fa-envelope"></i></div>
           <input required type="email" name="email" placeholder="Email" />
         </div>
         <div class="form-group">
+          <div class="form-icon"><i class="fas fa-pencil-alt"></i></div>
           <label for="message">Your Message:</label>
           <textarea required name="message" placeholder="Message"></textarea>
         </div>
+
         <button class="btn btn-inverted full-width submit" type="submit">
           Send Message
         </button>

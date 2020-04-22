@@ -54,6 +54,10 @@ button {
   background-color: $color-primary;
 }
 
+.btn-inverted:active {
+  background-color: lighten($color-primary, 10);
+}
+
 a.btn:hover {
   background-color: $color-primary;
   color: $color-dark;
@@ -267,14 +271,36 @@ section.intro {
   input,
   textarea {
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem 0.8rem 2.7rem;
     font-size: 1rem;
     margin: 0.4em 0 1.2em;
-    border: 1px solid lightgrey;
+    border: 3px solid lightgrey;
+  }
+
+  input:focus,
+  textarea:focus {
+    border: 3px $color-primary solid;
+    outline: none;
+  }
+
+  .form-icon {
+    position: absolute;
+    font-size: 1.3em;
+    top: 14px;
+    left: 12px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  textarea {
+    height: 300px;
   }
   .submit {
     font-weight: bold;
     font-size: 1.2em;
     letter-spacing: 1px;
+    border-width: 2px;
+  }
+  .submit:active {
+    outline: none;
   }
 }
