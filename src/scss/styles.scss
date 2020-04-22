@@ -230,8 +230,9 @@ section.intro {
 
 .about {
   @media (max-width: 800px) {
-    padding-top: 200px;
+    padding-top: 190px;
     margin-top: -50px;
+    margin-bottom: 0;
   }
   .profile-image {
     border-radius: 50%;
@@ -260,7 +261,7 @@ section.intro {
 
 .contact-me {
   @media (max-width: 800px) {
-    padding-top: 190px;
+    padding-top: 170px;
     margin-top: -50px;
   }
   font-size: 1em;
