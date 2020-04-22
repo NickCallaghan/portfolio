@@ -75,7 +75,7 @@ section h2 {
     flex-direction: column;
     align-items: center;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     flex-direction: row;
   }
   .brand {
@@ -127,7 +127,7 @@ section h2 {
     transform: rotateX(0deg);
     transition: all 0.7s;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     .nav-wrapper {
       flex-direction: row;
       // padding: 0.2em;
