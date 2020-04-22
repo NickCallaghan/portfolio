@@ -27,7 +27,7 @@
         <ul class="main-nav-list">
           <li class="main-nav-item"><a href="#about-section">About</a></li>
           <li class="main-nav-item"><a href="#">Portfolio</a></li>
-          <li class="main-nav-item"><a href="#">Contact</a></li>
+          <li class="main-nav-item"><a href="#contact-me">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -54,9 +54,7 @@
               ></a>
             </li>
             <li>
-              <a href="mailto:nicholas.callaghan@gmail.com?subject=Oh%20Hai"
-                ><i class="far fa-envelope"></i
-              ></a>
+              <a href="#contact-me"><i class="far fa-envelope"></i></a>
             </li>
           </ul>
         </aside>
@@ -150,29 +148,24 @@
         </div>
       </div>
     </section>
-    <section class="contact-me">
+    <section id="contact-me" class="contact-me">
+      <h2 class="section-heading">Talk to me</h2>
       <form name="contact" method="POST" data-netlify="true">
-        <p>
-          <label>Your Name: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label
-            >Your Role:
-            <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select></label
-          >
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input required type="text" name="name" placeholder="Name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input required type="email" name="email" placeholder="Email" />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea required name="message" placeholder="Message"></textarea>
+        </div>
+        <button class="btn btn-inverted full-width submit" type="submit">
+          Send Message
+        </button>
       </form>
     </section>
   </body>

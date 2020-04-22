@@ -20,6 +20,7 @@ html {
 
 h2 {
   color: $color-dark;
+  text-align: center;
 }
 
 body {
@@ -28,7 +29,16 @@ body {
   font-size: 1em;
 }
 
-a.btn {
+button {
+  font-size: inherit;
+}
+
+.full-width {
+  display: block;
+  width: 100%;
+}
+
+.btn {
   border: 1px solid $color-primary;
   color: $color-primary;
   text-transform: uppercase;
@@ -36,6 +46,12 @@ a.btn {
   display: inline-block;
   border-radius: 15px;
   margin-top: 1em;
+}
+
+.btn-inverted {
+  border: 1px solid $color-dark;
+  color: $color-dark;
+  background-color: $color-primary;
 }
 
 a.btn:hover {
@@ -193,8 +209,8 @@ section.intro {
   }
 }
 
-// About Section
-.about {
+.about,
+.contact-me {
   padding: 7.5em 2em;
   display: flex;
   max-width: 800px;
@@ -202,6 +218,11 @@ section.intro {
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
+}
+
+// About Section
+
+.about {
   .profile-image {
     border-radius: 50%;
   }
@@ -223,7 +244,37 @@ section.intro {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     .section-heading {
       grid-column: 1/-1;
-      text-align: center;
     }
+  }
+}
+
+.contact-me {
+  font-size: 1em;
+  padding-top: 3em;
+  & > * {
+    display: block;
+    width: 100%;
+  }
+
+  label {
+    display: none;
+  }
+
+  .form-group {
+    position: relative;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0.4em 0 1.2em;
+    border: 1px solid lightgrey;
+  }
+  .submit {
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 1px;
   }
 }
